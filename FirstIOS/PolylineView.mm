@@ -55,7 +55,7 @@ using namespace std;
     
 //    vector<vector<NSString*>> vvData;
 //    NSString *s1 = @"test";
-//    [self GetDBData:s1 ToVector:vvData];
+//    [self GetDBData:s1 ToVVector:vvData];
     
     NSString *home = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
     NSString *path = [home stringByAppendingString:@"/my.db"];
@@ -85,7 +85,7 @@ using namespace std;
     }
 }
 
--(void)GetDBData:(NSString*)sql ToVector:(vector<vector<NSString*>>&)vvData
+-(void)GetDBData:(NSString*)sql ToVVector:(vector<vector<NSString*>>&)vvData
 {
     char *sErrMsg = 0;
     char **dbResult;
@@ -98,10 +98,58 @@ using namespace std;
                 NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn+j]];
                 vValue.push_back( sValue );
             }
-            
+            vvData.push_back( vValue );
         }
     }
 }
 
+-(void)GetDBDataSingleRow:(NSString*)sql ToVector:(vector<NSString*>&)vData
+{
+    char *sErrMsg = 0;
+    char **dbResult;
+    int nRow=0;
+    int nColumn=0;
+    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+        if( nRow>0 ){
+            assert( nRow==1 );
+    
+            for( int j=0; j<nColumn; j++ ){
+                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn+j]];
+                vData.push_back( sValue );
+            }
+        }
+    }
+}
+
+-(void)GetDBDataSingleCol:(NSString*)sql ToVector:(vector<NSString*>&)vData
+{
+    char *sErrMsg = 0;
+    char **dbResult;
+    int nRow=0;
+    int nColumn=0;
+    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+        for( int i=0; i<nRow; i++ ){
+            NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn]];
+            vData.push_back( sValue );
+        }
+    }
+}
+
+-(NSString*)GetDBDataSingleValue:(NSString*)sql
+{
+    char *sErrMsg = 0;
+    char **dbResult;
+    int nRow=0;
+    int nColumn=0;
+    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+        if( nRow>0 ){
+            assert( nRow==1 );
+            assert( nColumn==1 );
+            return [NSString stringWithUTF8String:dbResult[nColumn]];
+        }
+    }
+    
+    return nil;
+}
 
 @end
