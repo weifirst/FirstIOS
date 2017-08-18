@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3A15971F458FC10052553B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3A15961F458FC10052553B /* libsqlite3.tbd */; };
+		2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E1291F469A01003DEE20 /* PolylineView.mm */; };
 		2D5ED6AA1F43DE150056F319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6A91F43DE150056F319 /* main.m */; };
 		2D5ED6AD1F43DE150056F319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AC1F43DE150056F319 /* AppDelegate.m */; };
 		2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AF1F43DE150056F319 /* ViewController.m */; };
 		2D5ED6B31F43DE150056F319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B11F43DE150056F319 /* Main.storyboard */; };
 		2D5ED6B51F43DE150056F319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B41F43DE150056F319 /* Assets.xcassets */; };
 		2D5ED6B81F43DE150056F319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B61F43DE150056F319 /* LaunchScreen.storyboard */; };
-		2D5ED6C11F43E0DE0056F319 /* PolylineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6C01F43E0DE0056F319 /* PolylineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D3A15961F458FC10052553B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2D59E1291F469A01003DEE20 /* PolylineView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PolylineView.mm; sourceTree = "<group>"; };
 		2D5ED6A51F43DE150056F319 /* FirstIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5ED6A91F43DE150056F319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D5ED6AB1F43DE150056F319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,7 +31,6 @@
 		2D5ED6B71F43DE150056F319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D5ED6B91F43DE150056F319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D5ED6BF1F43E0DE0056F319 /* PolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolylineView.h; sourceTree = "<group>"; };
-		2D5ED6C01F43E0DE0056F319 /* PolylineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolylineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +38,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3A15971F458FC10052553B /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3A15951F458FC10052553B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D3A15961F458FC10052553B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D5ED69C1F43DE150056F319 = {
 			isa = PBXGroup;
 			children = (
 				2D5ED6A71F43DE150056F319 /* FirstIOS */,
 				2D5ED6A61F43DE150056F319 /* Products */,
+				2D3A15951F458FC10052553B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +83,7 @@
 				2D5ED6B91F43DE150056F319 /* Info.plist */,
 				2D5ED6A81F43DE150056F319 /* Supporting Files */,
 				2D5ED6BF1F43E0DE0056F319 /* PolylineView.h */,
-				2D5ED6C01F43E0DE0056F319 /* PolylineView.m */,
+				2D59E1291F469A01003DEE20 /* PolylineView.mm */,
 			);
 			path = FirstIOS;
 			sourceTree = "<group>";
@@ -155,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D5ED6C11F43E0DE0056F319 /* PolylineView.m in Sources */,
+				2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */,
 				2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */,
 				2D5ED6AD1F43DE150056F319 /* AppDelegate.m in Sources */,
 				2D5ED6AA1F43DE150056F319 /* main.m in Sources */,
@@ -317,6 +329,7 @@
 				2D5ED6BE1F43DE150056F319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
