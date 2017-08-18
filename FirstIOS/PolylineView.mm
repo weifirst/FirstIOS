@@ -68,8 +68,10 @@ using namespace std;
         return nil;
     }
     
-    NSString *sqlCreatTable = @"CREATE TABLE IF NOT EXISTS FundInfo(ID integer primary key autoincrement not null, count integer not null, date dateime not null)";
-    [self exeSql:sqlCreatTable];
+    //NSString *sqlCreatTable = @"CREATE TABLE IF NOT EXISTS FundInfo(ID integer primary key autoincrement not null, count integer not null, date dateime not null)";
+    //[self exeSql:sqlCreatTable];
+    
+    
     
     return self;
 }

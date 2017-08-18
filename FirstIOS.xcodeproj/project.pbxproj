@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D3A15971F458FC10052553B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3A15961F458FC10052553B /* libsqlite3.tbd */; };
 		2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E1291F469A01003DEE20 /* PolylineView.mm */; };
+		2D59E12E1F46D71B003DEE20 /* InputDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E12C1F46D71B003DEE20 /* InputDataViewController.m */; };
+		2D59E12F1F46D71B003DEE20 /* InputDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */; };
 		2D5ED6AA1F43DE150056F319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6A91F43DE150056F319 /* main.m */; };
 		2D5ED6AD1F43DE150056F319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AC1F43DE150056F319 /* AppDelegate.m */; };
 		2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AF1F43DE150056F319 /* ViewController.m */; };
@@ -20,6 +22,9 @@
 /* Begin PBXFileReference section */
 		2D3A15961F458FC10052553B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2D59E1291F469A01003DEE20 /* PolylineView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PolylineView.mm; sourceTree = "<group>"; };
+		2D59E12B1F46D71B003DEE20 /* InputDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputDataViewController.h; sourceTree = "<group>"; };
+		2D59E12C1F46D71B003DEE20 /* InputDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputDataViewController.m; sourceTree = "<group>"; };
+		2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputDataViewController.xib; sourceTree = "<group>"; };
 		2D5ED6A51F43DE150056F319 /* FirstIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5ED6A91F43DE150056F319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D5ED6AB1F43DE150056F319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +89,9 @@
 				2D5ED6A81F43DE150056F319 /* Supporting Files */,
 				2D5ED6BF1F43E0DE0056F319 /* PolylineView.h */,
 				2D59E1291F469A01003DEE20 /* PolylineView.mm */,
+				2D59E12B1F46D71B003DEE20 /* InputDataViewController.h */,
+				2D59E12C1F46D71B003DEE20 /* InputDataViewController.m */,
+				2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */,
 			);
 			path = FirstIOS;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5ED6B81F43DE150056F319 /* LaunchScreen.storyboard in Resources */,
+				2D59E12F1F46D71B003DEE20 /* InputDataViewController.xib in Resources */,
 				2D5ED6B51F43DE150056F319 /* Assets.xcassets in Resources */,
 				2D5ED6B31F43DE150056F319 /* Main.storyboard in Resources */,
 			);
@@ -167,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D59E12E1F46D71B003DEE20 /* InputDataViewController.m in Sources */,
 				2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */,
 				2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */,
 				2D5ED6AD1F43DE150056F319 /* AppDelegate.m in Sources */,
