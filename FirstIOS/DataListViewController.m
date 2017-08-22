@@ -9,6 +9,7 @@
 #import "DataListViewController.h"
 #import "GenTableView.h"
 #import "NewRecordView.h"
+#import "AppDelegate.h"
 
 @interface DataListViewController ()
 
@@ -51,37 +52,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(CGRect)relativeFrameForScreenWithView:(UIView *)v
-//{
-//    BOOL iOS7 = [[[UIDevice currentDevice] systemVersion] floatValue] >= 7;
-//    
-//    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-//    if (!iOS7) {
-//        screenHeight -= 20;
-//    }
-//    UIView *view = v;
-//    CGFloat x = .0;
-//    CGFloat y = .0;
-//    while (view.frame.size.width != 320 || view.frame.size.height != screenHeight) {
-//        x += view.frame.origin.x;
-//        y += view.frame.origin.y;
-//        view = view.superview;
-//        if ([view isKindOfClass:[UIScrollView class]]) {
-//            x -= ((UIScrollView *) view).contentOffset.x;
-//            y -= ((UIScrollView *) view).contentOffset.y;
-//        }
-//    }
-//    return CGRectMake(x, y, v.frame.size.width, v.frame.size.height);
-//}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillAppear:(BOOL)animated
+{
+    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //appDelegate
 }
-*/
 
 @end

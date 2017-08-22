@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "sqlite3.h"
+#include "sqlite3.h"
+//#include <vector>
+//using namespace std;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) sqlite3 *db;
+
+//-(void)GetDBData:(NSString*)sql ToVVector:(vector<vector<NSString*>>&)vvData;
 
 @end
 
