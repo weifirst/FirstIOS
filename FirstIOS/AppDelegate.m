@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DataListViewController.h"
+#import "ViewController.h"
+#import "TabVC.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-   // [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+    TabVC *tab = [[TabVC alloc] init];
+    tab.view.backgroundColor = [UIColor redColor];
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible ];
+    
     return YES;
 }
 
