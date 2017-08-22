@@ -7,11 +7,12 @@
 //
 
 #import "PolylineView.h"
-#import "sqlite3.h"
 #import <vector>
 using namespace std;
+
+
 @interface PolylineView()
-@property (nonatomic,assign) sqlite3 *db;
+//@property (nonatomic,assign) sqlite3 *db;
 @end
 
 @implementation PolylineView
@@ -57,16 +58,16 @@ using namespace std;
 //    NSString *s1 = @"test";
 //    [self GetDBData:s1 ToVVector:vvData];
     
-    NSString *home = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *path = [home stringByAppendingString:@"/my.db"];
-    if( sqlite3_open(path.UTF8String, &_db)==SQLITE_OK ){
-        NSLog(@"打开数据库成功");
-        NSLog(@"%@", path);
-    }
-    else{
-        NSLog(@"打开数据库失败");
-        return nil;
-    }
+//    NSString *home = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
+//    NSString *path = [home stringByAppendingString:@"/my.db"];
+//    if( sqlite3_open(path.UTF8String, &g_db)==SQLITE_OK ){
+//        NSLog(@"打开数据库成功");
+//        NSLog(@"%@", path);
+//    }
+//    else{
+//        NSLog(@"打开数据库失败");
+//        return nil;
+//    }
     
     //NSString *sqlCreatTable = @"CREATE TABLE IF NOT EXISTS FundInfo(ID integer primary key autoincrement not null, count integer not null, date dateime not null)";
     //[self exeSql:sqlCreatTable];
@@ -76,82 +77,82 @@ using namespace std;
     return self;
 }
 
--(BOOL)exeSql:(NSString*)sql
-{
-    char *errmsg;
-    if( sqlite3_exec(_db, sql.UTF8String, nil, nil, &errmsg)!=SQLITE_OK ){
-        return NO;
-    }
-    else{
-        return YES;
-    }
-}
-
--(void)GetDBData:(NSString*)sql ToVVector:(vector<vector<NSString*>>&)vvData
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        for( int i=0; i<nRow; i++ ){
-            vector<NSString*> vValue;
-            for( int j=0; j<nColumn; j++ ){
-                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn+j]];
-                vValue.push_back( sValue );
-            }
-            vvData.push_back( vValue );
-        }
-    }
-}
-
--(void)GetDBDataSingleRow:(NSString*)sql ToVector:(vector<NSString*>&)vData
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        if( nRow>0 ){
-            assert( nRow==1 );
-    
-            for( int j=0; j<nColumn; j++ ){
-                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn+j]];
-                vData.push_back( sValue );
-            }
-        }
-    }
-}
-
--(void)GetDBDataSingleCol:(NSString*)sql ToVector:(vector<NSString*>&)vData
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        for( int i=0; i<nRow; i++ ){
-            NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn]];
-            vData.push_back( sValue );
-        }
-    }
-}
-
--(NSString*)GetDBDataSingleValue:(NSString*)sql
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        if( nRow>0 ){
-            assert( nRow==1 );
-            assert( nColumn==1 );
-            return [NSString stringWithUTF8String:dbResult[nColumn]];
-        }
-    }
-    
-    return nil;
-}
+//-(BOOL)exeSql:(NSString*)sql
+//{
+//    char *errmsg;
+//    if( sqlite3_exec(g_db, sql.UTF8String, nil, nil, &errmsg)!=SQLITE_OK ){
+//        return NO;
+//    }
+//    else{
+//        return YES;
+//    }
+//}
+//
+//-(void)GetDBData:(NSString*)sql ToVVector:(vector<vector<NSString*>>&)vvData
+//{
+//    char *sErrMsg = 0;
+//    char **dbResult;
+//    int nRow=0;
+//    int nColumn=0;
+//    if( sqlite3_get_table(g_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+//        for( int i=0; i<nRow; i++ ){
+//            vector<NSString*> vValue;
+//            for( int j=0; j<nColumn; j++ ){
+//                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn+j]];
+//                vValue.push_back( sValue );
+//            }
+//            vvData.push_back( vValue );
+//        }
+//    }
+//}
+//
+//-(void)GetDBDataSingleRow:(NSString*)sql ToVector:(vector<NSString*>&)vData
+//{
+//    char *sErrMsg = 0;
+//    char **dbResult;
+//    int nRow=0;
+//    int nColumn=0;
+//    if( sqlite3_get_table(g_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+//        if( nRow>0 ){
+//            assert( nRow==1 );
+//    
+//            for( int j=0; j<nColumn; j++ ){
+//                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn+j]];
+//                vData.push_back( sValue );
+//            }
+//        }
+//    }
+//}
+//
+//-(void)GetDBDataSingleCol:(NSString*)sql ToVector:(vector<NSString*>&)vData
+//{
+//    char *sErrMsg = 0;
+//    char **dbResult;
+//    int nRow=0;
+//    int nColumn=0;
+//    if( sqlite3_get_table(g_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+//        for( int i=0; i<nRow; i++ ){
+//            NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn]];
+//            vData.push_back( sValue );
+//        }
+//    }
+//}
+//
+//-(NSString*)GetDBDataSingleValue:(NSString*)sql
+//{
+//    char *sErrMsg = 0;
+//    char **dbResult;
+//    int nRow=0;
+//    int nColumn=0;
+//    if( sqlite3_get_table(g_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+//        if( nRow>0 ){
+//            assert( nRow==1 );
+//            assert( nColumn==1 );
+//            return [NSString stringWithUTF8String:dbResult[nColumn]];
+//        }
+//    }
+//    
+//    return nil;
+//}
 
 @end

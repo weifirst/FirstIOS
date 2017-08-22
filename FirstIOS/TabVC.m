@@ -31,7 +31,7 @@
     
     ViewController *vcChart = [[ViewController alloc] init];
     [self addChildViewController:vcChart];
-    vcChart.view.frame = CGRectMake(0, 44, 320, 320);
+    vcChart.view.frame = CGRectMake(0, 60, 320, 320);
     [self.view addSubview:vcChart.view];
     [vcChart didMoveToParentViewController:self];
     [vcChart.view setHidden:YES];
@@ -48,9 +48,6 @@
 - (IBAction)btnClickChart:(id)sender {
     [self.childViewControllers[0].view setHidden:YES];
     [self.childViewControllers[1].view setHidden:NO];
-    
-    CGFloat fa = self.childViewControllers[0].view.frame.origin.y;
-    CGFloat fb = self.childViewControllers[0].view.frame.size.height;
 }
 
 /*

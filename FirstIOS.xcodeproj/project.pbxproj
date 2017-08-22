@@ -15,7 +15,7 @@
 		2D59E12F1F46D71B003DEE20 /* InputDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */; };
 		2D59E1331F46E88D003DEE20 /* DataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E1311F46E88D003DEE20 /* DataListViewController.m */; };
 		2D5ED6AA1F43DE150056F319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6A91F43DE150056F319 /* main.m */; };
-		2D5ED6AD1F43DE150056F319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AC1F43DE150056F319 /* AppDelegate.m */; };
+		2D5ED6AD1F43DE150056F319 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AC1F43DE150056F319 /* AppDelegate.mm */; };
 		2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AF1F43DE150056F319 /* ViewController.m */; };
 		2D5ED6B31F43DE150056F319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B11F43DE150056F319 /* Main.storyboard */; };
 		2D5ED6B51F43DE150056F319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B41F43DE150056F319 /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		2D5ED6A51F43DE150056F319 /* FirstIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5ED6A91F43DE150056F319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D5ED6AB1F43DE150056F319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2D5ED6AC1F43DE150056F319 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D5ED6AC1F43DE150056F319 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		2D5ED6AE1F43DE150056F319 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2D5ED6AF1F43DE150056F319 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2D5ED6B21F43DE150056F319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.m */,
 				2DFA05BE1F4A82C200B7C741 /* GenTableViewCell.xib */,
 				2D5ED6AB1F43DE150056F319 /* AppDelegate.h */,
-				2D5ED6AC1F43DE150056F319 /* AppDelegate.m */,
+				2D5ED6AC1F43DE150056F319 /* AppDelegate.mm */,
 				2D5ED6AE1F43DE150056F319 /* ViewController.h */,
 				2D5ED6AF1F43DE150056F319 /* ViewController.m */,
 				2D5ED6B11F43DE150056F319 /* Main.storyboard */,
@@ -216,7 +216,7 @@
 				2DFA05C91F4AC30100B7C741 /* NewRecordView.m in Sources */,
 				2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */,
 				2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */,
-				2D5ED6AD1F43DE150056F319 /* AppDelegate.m in Sources */,
+				2D5ED6AD1F43DE150056F319 /* AppDelegate.mm in Sources */,
 				2DFA05BF1F4A82C200B7C741 /* GenTableView.m in Sources */,
 				2D5ED6AA1F43DE150056F319 /* main.m in Sources */,
 			);

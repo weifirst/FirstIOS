@@ -23,10 +23,7 @@
     // Do any additional setup after loading the view from its nib.
 #define NEW_RECORD_HEIGHT 80
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-  //  CGFloat A = self.view.frame.size.height;
-  //  CGFloat A1 = self.view.frame.origin.y;
-    //CGRect rc = [self relativeFrameForScreenWithView: self.view];
-    GenTableView *table = [[GenTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, screenHeight-60-NEW_RECORD_HEIGHT/*+rc.-50*/) style:UITableViewStylePlain];
+    GenTableView *table = [[GenTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, screenHeight-60-NEW_RECORD_HEIGHT) style:UITableViewStylePlain];
     
     table.textLabelArray = [[NSMutableArray alloc] initWithObjects:@"235567", @"325667",@"335566",@"349988",@"350345",@"350551",@"A",@"B",@"C",@"D",@"E",@"F",@"G",nil];
     
@@ -45,9 +42,7 @@
     NewRecordView *newView = [[NewRecordView alloc] initWithFrame:CGRectMake(0, f, self.view.bounds.size.width, NEW_RECORD_HEIGHT)];
     
     newView.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.0];
-
     
-    //newView.backgroundColor = [UIColor colorWithRed:204 green:204 blue:204 alpha:1.0];
     [self.view addSubview:newView];
 }
 
