@@ -10,6 +10,7 @@
 #import "GenTableView.h"
 #import "NewRecordView.h"
 #import "AppDelegate.h"
+#import "Global.h"
 
 @interface DataListViewController ()
 
@@ -54,8 +55,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //appDelegate
+    ((GenTableView*)self.view.subviews[0]).LoadData;
 }
 
 @end

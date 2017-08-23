@@ -34,11 +34,12 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_textLabelArray count];
+    return m_vvData.size();
 }
 
 -(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Users/wzg/Library/Developer/CoreSimulator/Devices/46EE7734-2C90-4CC5-8649-CFA88860DAEB/data/Containers/Data/Application/F7DB83F2-384E-4D6F-AF89-ACBFC6A194E0/Documents/
     static NSString *ID = @"cell";
     GenTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if( !cell ){
@@ -46,8 +47,14 @@
       
         NSLog(@"%ld", indexPath.row);
     }
-    cell.labelDataCount.text = _textLabelArray[indexPath.row];
-    cell.labelDate.text = _textDateArray[indexPath.row];
+    cell.labelDataCount.text = m_vvData[indexPath.row][1];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[m_vvData[indexPath.row][2] doubleValue]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *sTime = [formatter stringFromDate:date];
+    
+
+    cell.labelDate.text = sTime;
     
     return cell;
 }
@@ -56,4 +63,11 @@
 {
     return _floatRowHeight;
 }
+
+-(void)LoadData
+{
+    m_vvData.clear();
+    GetDBData(@"SELECT ID,count,date FROM FundInfo", m_vvData);
+}
+
 @end

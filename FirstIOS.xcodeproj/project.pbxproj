@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1B69431F4D220E006E573D /* Global.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B69421F4D220E006E573D /* Global.mm */; };
 		2D3A15971F458FC10052553B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3A15961F458FC10052553B /* libsqlite3.tbd */; };
 		2D4F4E2A1F498553007D879E /* TabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F4E281F498553007D879E /* TabVC.m */; };
 		2D4F4E2B1F498553007D879E /* TabVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F4E291F498553007D879E /* TabVC.xib */; };
 		2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E1291F469A01003DEE20 /* PolylineView.mm */; };
 		2D59E12E1F46D71B003DEE20 /* InputDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E12C1F46D71B003DEE20 /* InputDataViewController.m */; };
 		2D59E12F1F46D71B003DEE20 /* InputDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */; };
-		2D59E1331F46E88D003DEE20 /* DataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E1311F46E88D003DEE20 /* DataListViewController.m */; };
+		2D59E1331F46E88D003DEE20 /* DataListViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D59E1311F46E88D003DEE20 /* DataListViewController.mm */; };
 		2D5ED6AA1F43DE150056F319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6A91F43DE150056F319 /* main.m */; };
 		2D5ED6AD1F43DE150056F319 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AC1F43DE150056F319 /* AppDelegate.mm */; };
 		2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED6AF1F43DE150056F319 /* ViewController.m */; };
 		2D5ED6B31F43DE150056F319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B11F43DE150056F319 /* Main.storyboard */; };
 		2D5ED6B51F43DE150056F319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B41F43DE150056F319 /* Assets.xcassets */; };
 		2D5ED6B81F43DE150056F319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED6B61F43DE150056F319 /* LaunchScreen.storyboard */; };
-		2DFA05BF1F4A82C200B7C741 /* GenTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA05BB1F4A82C200B7C741 /* GenTableView.m */; };
-		2DFA05C01F4A82C200B7C741 /* GenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.m */; };
+		2DFA05BF1F4A82C200B7C741 /* GenTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA05BB1F4A82C200B7C741 /* GenTableView.mm */; };
+		2DFA05C01F4A82C200B7C741 /* GenTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.mm */; };
 		2DFA05C11F4A82C200B7C741 /* GenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA05BE1F4A82C200B7C741 /* GenTableViewCell.xib */; };
 		2DFA05C91F4AC30100B7C741 /* NewRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA05C81F4AC30100B7C741 /* NewRecordView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1B69411F4D1C54006E573D /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		2D1B69421F4D220E006E573D /* Global.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Global.mm; sourceTree = "<group>"; };
 		2D3A15961F458FC10052553B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2D4F4E271F498553007D879E /* TabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabVC.h; sourceTree = "<group>"; };
 		2D4F4E281F498553007D879E /* TabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabVC.m; sourceTree = "<group>"; };
@@ -36,7 +39,7 @@
 		2D59E12C1F46D71B003DEE20 /* InputDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputDataViewController.m; sourceTree = "<group>"; };
 		2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputDataViewController.xib; sourceTree = "<group>"; };
 		2D59E1301F46E88D003DEE20 /* DataListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataListViewController.h; sourceTree = "<group>"; };
-		2D59E1311F46E88D003DEE20 /* DataListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataListViewController.m; sourceTree = "<group>"; };
+		2D59E1311F46E88D003DEE20 /* DataListViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DataListViewController.mm; sourceTree = "<group>"; };
 		2D5ED6A51F43DE150056F319 /* FirstIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5ED6A91F43DE150056F319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D5ED6AB1F43DE150056F319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,9 +52,9 @@
 		2D5ED6B91F43DE150056F319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D5ED6BF1F43E0DE0056F319 /* PolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolylineView.h; sourceTree = "<group>"; };
 		2DFA05BA1F4A82C200B7C741 /* GenTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenTableView.h; sourceTree = "<group>"; };
-		2DFA05BB1F4A82C200B7C741 /* GenTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenTableView.m; sourceTree = "<group>"; };
+		2DFA05BB1F4A82C200B7C741 /* GenTableView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GenTableView.mm; sourceTree = "<group>"; };
 		2DFA05BC1F4A82C200B7C741 /* GenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenTableViewCell.h; sourceTree = "<group>"; };
-		2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenTableViewCell.m; sourceTree = "<group>"; };
+		2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GenTableViewCell.mm; sourceTree = "<group>"; };
 		2DFA05BE1F4A82C200B7C741 /* GenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenTableViewCell.xib; sourceTree = "<group>"; };
 		2DFA05C71F4AC30100B7C741 /* NewRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRecordView.h; sourceTree = "<group>"; };
 		2DFA05C81F4AC30100B7C741 /* NewRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRecordView.m; sourceTree = "<group>"; };
@@ -98,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				2DFA05BA1F4A82C200B7C741 /* GenTableView.h */,
-				2DFA05BB1F4A82C200B7C741 /* GenTableView.m */,
+				2DFA05BB1F4A82C200B7C741 /* GenTableView.mm */,
 				2DFA05BC1F4A82C200B7C741 /* GenTableViewCell.h */,
-				2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.m */,
+				2DFA05BD1F4A82C200B7C741 /* GenTableViewCell.mm */,
 				2DFA05BE1F4A82C200B7C741 /* GenTableViewCell.xib */,
 				2D5ED6AB1F43DE150056F319 /* AppDelegate.h */,
 				2D5ED6AC1F43DE150056F319 /* AppDelegate.mm */,
@@ -117,12 +120,14 @@
 				2D59E12C1F46D71B003DEE20 /* InputDataViewController.m */,
 				2D59E12D1F46D71B003DEE20 /* InputDataViewController.xib */,
 				2D59E1301F46E88D003DEE20 /* DataListViewController.h */,
-				2D59E1311F46E88D003DEE20 /* DataListViewController.m */,
+				2D59E1311F46E88D003DEE20 /* DataListViewController.mm */,
 				2D4F4E271F498553007D879E /* TabVC.h */,
 				2D4F4E281F498553007D879E /* TabVC.m */,
 				2D4F4E291F498553007D879E /* TabVC.xib */,
 				2DFA05C71F4AC30100B7C741 /* NewRecordView.h */,
 				2DFA05C81F4AC30100B7C741 /* NewRecordView.m */,
+				2D1B69411F4D1C54006E573D /* Global.h */,
+				2D1B69421F4D220E006E573D /* Global.mm */,
 			);
 			path = FirstIOS;
 			sourceTree = "<group>";
@@ -210,14 +215,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D4F4E2A1F498553007D879E /* TabVC.m in Sources */,
-				2D59E1331F46E88D003DEE20 /* DataListViewController.m in Sources */,
-				2DFA05C01F4A82C200B7C741 /* GenTableViewCell.m in Sources */,
+				2D59E1331F46E88D003DEE20 /* DataListViewController.mm in Sources */,
+				2DFA05C01F4A82C200B7C741 /* GenTableViewCell.mm in Sources */,
 				2D59E12E1F46D71B003DEE20 /* InputDataViewController.m in Sources */,
 				2DFA05C91F4AC30100B7C741 /* NewRecordView.m in Sources */,
 				2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */,
 				2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */,
 				2D5ED6AD1F43DE150056F319 /* AppDelegate.mm in Sources */,
-				2DFA05BF1F4A82C200B7C741 /* GenTableView.m in Sources */,
+				2DFA05BF1F4A82C200B7C741 /* GenTableView.mm in Sources */,
+				2D1B69431F4D220E006E573D /* Global.mm in Sources */,
 				2D5ED6AA1F43DE150056F319 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

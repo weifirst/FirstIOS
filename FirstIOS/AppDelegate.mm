@@ -10,8 +10,7 @@
 #import "DataListViewController.h"
 #import "ViewController.h"
 #import "TabVC.h"
-#import <vector>
-using namespace std;
+#import "Global.h"
 
 
 @interface AppDelegate ()
@@ -23,14 +22,9 @@ using namespace std;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    TabVC *tab = [[TabVC alloc] init];
-    tab.view.backgroundColor = [UIColor colorWithRed:0 green:200/255.0 blue:0 alpha:1.0];
-    self.window.rootViewController = tab;
-    [self.window makeKeyAndVisible ];
-    
     NSString *home = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
     NSString *path = [home stringByAppendingString:@"/my.db"];
-    if( sqlite3_open(path.UTF8String, &_db)==SQLITE_OK ){
+    if( sqlite3_open(path.UTF8String, &g_db)==SQLITE_OK ){
         NSLog(@"打开数据库成功");
         NSLog(@"%@", path);
     }
@@ -38,6 +32,15 @@ using namespace std;
         NSLog(@"打开数据库失败");
         return nil;
     }
+
+    TabVC *tab = [[TabVC alloc] init];
+    tab.view.backgroundColor = [UIColor colorWithRed:0 green:200/255.0 blue:0 alpha:1.0];
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible ];
+    
+        
+//    NSString *sqlCreatTable = @"CREATE TABLE IF NOT EXISTS FundInfo(ID integer primary key autoincrement not null, count integer not null, date dateime not null)";
+//    exeSql( sqlCreatTable );
     
     return YES;
 }
@@ -69,83 +72,36 @@ using namespace std;
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(BOOL)exeSql:(NSString*)sql
-{
-    char *errmsg;
-    if( sqlite3_exec(_db, sql.UTF8String, nil, nil, &errmsg)!=SQLITE_OK ){
-        return NO;
-    }
-    else{
-        return YES;
-    }
-}
-
--(void)GetDBData:(NSString*)sql ToVVector:(vector<vector<NSString*>>&)vvData
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        for( int i=0; i<nRow; i++ ){
-            vector<NSString*> vValue;
-            for( int j=0; j<nColumn; j++ ){
-                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn+j]];
-                vValue.push_back( sValue );
-            }
-            vvData.push_back( vValue );
-        }
-    }
-}
-
--(void)GetDBDataSingleRow:(NSString*)sql ToVector:(vector<NSString*>&)vData
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        if( nRow>0 ){
-            assert( nRow==1 );
-            
-            for( int j=0; j<nColumn; j++ ){
-                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn+j]];
-                vData.push_back( sValue );
-            }
-        }
-    }
-}
-
--(void)GetDBDataSingleCol:(NSString*)sql ToVector:(vector<NSString*>&)vData
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        for( int i=0; i<nRow; i++ ){
-            NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn]];
-            vData.push_back( sValue );
-        }
-    }
-}
-
--(NSString*)GetDBDataSingleValue:(NSString*)sql
-{
-    char *sErrMsg = 0;
-    char **dbResult;
-    int nRow=0;
-    int nColumn=0;
-    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
-        if( nRow>0 ){
-            assert( nRow==1 );
-            assert( nColumn==1 );
-            return [NSString stringWithUTF8String:dbResult[nColumn]];
-        }
-    }
-    
-    return nil;
-}
+//-(BOOL)exeSql:(NSString*)sql
+//{
+//    char *errmsg;
+//    if( sqlite3_exec(_db, sql.UTF8String, nil, nil, &errmsg)!=SQLITE_OK ){
+//        return NO;
+//    }
+//    else{
+//        return YES;
+//    }
+//}
+//
+//-(void)GetDBData:(NSString*)sql ToVVector:(vector<vector<NSString*>>&)vvData
+//{
+//    char *sErrMsg = 0;
+//    char **dbResult;
+//    int nRow=0;
+//    int nColumn=0;
+//    if( sqlite3_get_table(_db, sql.UTF8String, &dbResult, &nRow, &nColumn, &sErrMsg)==SQLITE_OK ){
+//        for( int i=0; i<nRow; i++ ){
+//            vector<NSString*> vValue;
+//            for( int j=0; j<nColumn; j++ ){
+//                NSString *sValue = [NSString stringWithUTF8String:dbResult[nColumn*i+nColumn+j]];
+//                vValue.push_back( sValue );
+//            }
+//            vvData.push_back( vValue );
+//        }
+//    }
+//}
+//
+//-
 
 
 @end
