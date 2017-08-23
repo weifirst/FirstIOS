@@ -32,7 +32,7 @@
         NSLog(@"打开数据库失败");
         return nil;
     }
-
+    
     TabVC *tab = [[TabVC alloc] init];
     tab.view.backgroundColor = [UIColor colorWithRed:0 green:200/255.0 blue:0 alpha:1.0];
     self.window.rootViewController = tab;

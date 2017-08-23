@@ -22,7 +22,7 @@
     
     DataListViewController *vcList = [[DataListViewController alloc] init];
     [self addChildViewController:vcList];
-    vcList.view.frame = CGRectMake(0, 60, 320, 320);
+    vcList.view.frame = CGRectMake(0, 60, 800, 800);
     vcList.view.backgroundColor = [UIColor blueColor];
     
     [self.view addSubview:vcList.view];

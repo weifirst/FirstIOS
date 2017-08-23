@@ -27,10 +27,6 @@
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     GenTableView *table = [[GenTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, screenHeight-60-NEW_RECORD_HEIGHT) style:UITableViewStylePlain];
     
-    table.textLabelArray = [[NSMutableArray alloc] initWithObjects:@"235567", @"325667",@"335566",@"349988",@"350345",@"350551",@"A",@"B",@"C",@"D",@"E",@"F",@"G",nil];
-    
-    table.textDateArray = [[NSMutableArray alloc] initWithObjects:@"0", @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",nil];
-    
     table.estimatedRowHeight = 100;
     table.floatRowHeight = 60;
     NSMutableArray *images = [NSMutableArray array];
@@ -57,5 +53,6 @@
 {
     ((GenTableView*)self.view.subviews[0]).LoadData;
 }
+
 
 @end

@@ -28,10 +28,30 @@
     [button setTitle: @"新建" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:18.0f];
     button.backgroundColor = [UIColor colorWithRed:139.0/255 green:178.0/255 blue:38.0/255 alpha:1];
-    button.layer.cornerRadius = 20.0;
+    button.layer.cornerRadius = button.frame.size.height/2;
+    
+   
+    
     [self addSubview:button];
+    
+     [button addTarget:self action:@selector(pressBtnNew) forControlEvents:UIControlEventTouchUpInside];
     
     return self;
 }
+
+-(void)pressBtnNew
+{
+    
+}
+
+//-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+//{
+//    return self;
+//}
+
+//-(void)RegisterBtnClick:(UIViewController*)vc
+//{
+//    [((UIButton*)self.subviews[0]) addTarget:vc action:@selector(vc.pressBtnNew) forControlEvents:UIControlEventTouchUpInside];
+//}
 
 @end

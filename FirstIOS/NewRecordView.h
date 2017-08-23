@@ -10,4 +10,6 @@
 
 @interface NewRecordView : UIView
 
+//-(void)RegisterBtnClick:(UIViewController*)vc;
+
 @end
