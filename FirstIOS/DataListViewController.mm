@@ -9,6 +9,7 @@
 #import "DataListViewController.h"
 #import "GenTableView.h"
 #import "NewRecordView.h"
+#import "InputDataView.h"
 #import "AppDelegate.h"
 #import "Global.h"
 
@@ -40,8 +41,14 @@
     NewRecordView *newView = [[NewRecordView alloc] initWithFrame:CGRectMake(0, f, self.view.bounds.size.width, NEW_RECORD_HEIGHT)];
     
     newView.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.0];
-    
     [self.view addSubview:newView];
+    
+    //加入数据输入界面
+    InputDataView *inputView = [[[NSBundle mainBundle] loadNibNamed:@"InputDataView" owner:self options:nil] objectAtIndex:0];
+    //[inputView setHidden:false];
+    [self.view addSubview:inputView];
+    
+    [self.view.subviews[2] setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1A8E3F1F5413BF001EF297 /* InputDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A8E3E1F5413BF001EF297 /* InputDataView.m */; };
+		2D1A8E411F5414C2001EF297 /* InputDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1A8E401F5414C2001EF297 /* InputDataView.xib */; };
 		2D1B69431F4D220E006E573D /* Global.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B69421F4D220E006E573D /* Global.mm */; };
 		2D3A15971F458FC10052553B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3A15961F458FC10052553B /* libsqlite3.tbd */; };
 		2D4F4E2A1F498553007D879E /* TabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F4E281F498553007D879E /* TabVC.m */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1A8E3D1F5413BF001EF297 /* InputDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputDataView.h; sourceTree = "<group>"; };
+		2D1A8E3E1F5413BF001EF297 /* InputDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputDataView.m; sourceTree = "<group>"; };
+		2D1A8E401F5414C2001EF297 /* InputDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputDataView.xib; sourceTree = "<group>"; };
 		2D1B69411F4D1C54006E573D /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		2D1B69421F4D220E006E573D /* Global.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Global.mm; sourceTree = "<group>"; };
 		2D3A15961F458FC10052553B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -128,6 +133,9 @@
 				2DFA05C81F4AC30100B7C741 /* NewRecordView.m */,
 				2D1B69411F4D1C54006E573D /* Global.h */,
 				2D1B69421F4D220E006E573D /* Global.mm */,
+				2D1A8E3D1F5413BF001EF297 /* InputDataView.h */,
+				2D1A8E3E1F5413BF001EF297 /* InputDataView.m */,
+				2D1A8E401F5414C2001EF297 /* InputDataView.xib */,
 			);
 			path = FirstIOS;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1A8E411F5414C2001EF297 /* InputDataView.xib in Resources */,
 				2D4F4E2B1F498553007D879E /* TabVC.xib in Resources */,
 				2DFA05C11F4A82C200B7C741 /* GenTableViewCell.xib in Resources */,
 				2D5ED6B81F43DE150056F319 /* LaunchScreen.storyboard in Resources */,
@@ -221,6 +230,7 @@
 				2DFA05C91F4AC30100B7C741 /* NewRecordView.m in Sources */,
 				2D59E12A1F469A01003DEE20 /* PolylineView.mm in Sources */,
 				2D5ED6B01F43DE150056F319 /* ViewController.m in Sources */,
+				2D1A8E3F1F5413BF001EF297 /* InputDataView.m in Sources */,
 				2D5ED6AD1F43DE150056F319 /* AppDelegate.mm in Sources */,
 				2DFA05BF1F4A82C200B7C741 /* GenTableView.mm in Sources */,
 				2D1B69431F4D220E006E573D /* Global.mm in Sources */,

@@ -22,7 +22,7 @@
     
     DataListViewController *vcList = [[DataListViewController alloc] init];
     [self addChildViewController:vcList];
-    vcList.view.frame = CGRectMake(0, 60, 800, 800);
+    vcList.view.frame = CGRectMake(0, 60, 800, 800);//确保大过屏幕就行
     vcList.view.backgroundColor = [UIColor blueColor];
     
     [self.view addSubview:vcList.view];
@@ -31,7 +31,7 @@
     
     ViewController *vcChart = [[ViewController alloc] init];
     [self addChildViewController:vcChart];
-    vcChart.view.frame = CGRectMake(0, 60, 320, 320);
+    vcChart.view.frame = CGRectMake(0, 60, 800, 800);
     [self.view addSubview:vcChart.view];
     [vcChart didMoveToParentViewController:self];
     [vcChart.view setHidden:YES];
@@ -44,6 +44,10 @@
 - (IBAction)btnClickList:(id)sender {
     [self.childViewControllers[0].view setHidden:NO];
     [self.childViewControllers[1].view setHidden:YES];
+    int a = self.childViewControllers[0].view.frame.size.height;
+    int b = self.childViewControllers[1].view.frame.size.height;
+    int c = self.childViewControllers[0].view.frame.size.width;
+    int d = self.childViewControllers[1].view.frame.size.width;
 }
 - (IBAction)btnClickChart:(id)sender {
     [self.childViewControllers[0].view setHidden:YES];
