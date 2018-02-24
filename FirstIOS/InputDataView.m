@@ -18,8 +18,10 @@
 }
 */
 
-- (IBAction)BtnOK:(id)sender
+
+- (IBAction)ButtonOK:(id)sender
 {
+    [self endEditing:YES];
     [self setHidden:YES];
 }
 @end
