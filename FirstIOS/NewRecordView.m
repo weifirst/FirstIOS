@@ -41,7 +41,10 @@
 
 -(void)pressBtnNew
 {
-    [self.superview.subviews[2] setHidden:NO];
+    UIView *p1 = self.superview;
+    UIView *p2 = self.superview.superview;
+    UIView *p3 = self.superview.superview.subviews[0];
+    [self.superview.superview.subviews[4] setHidden:NO];
 }
 
 //-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event

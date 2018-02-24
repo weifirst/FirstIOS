@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InputDataView : UIView
-- (IBAction)BtnOK:(id)sender;
+- (IBAction)ButtonOK:(id)sender;
 
 @end
