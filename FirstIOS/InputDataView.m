@@ -16,5 +16,6 @@
 {
     [self endEditing:YES];
     [self setHidden:YES];
+    
 }
 @end
